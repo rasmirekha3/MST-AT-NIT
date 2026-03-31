@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOUL-NET – Talk to Your Past Self</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+body{
+  background:#0b0f14;
+  color:#e5e7eb;
+}
+
+.app{
+  display:flex;
+  height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:260px;
+  background:#0e131a;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+}
+
+.logo{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.logo .icon{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  padding:10px;
+  border-radius:12px;
+}
+
+.logo h2{
+  font-size:18px;
+}
+
+.logo span{
+  font-size:12px;
+  color:#9ca3af;
+}
+
+.welcome{
+  margin:24px 0;
+  color:#9ca3af;
+}
+
+nav a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  margin-bottom:6px;
+  border-radius:12px;
+  color:#cbd5f5;
+  cursor:pointer;
+}
+
+nav a.active,
+nav a:hover{
+  background:#111827;
+}
+
+.sidebar footer{
+  margin-top:auto;
+  font-size:12px;
+  color:#6b7280;
+  opacity:.8;
+}
+
+/* ===== MAIN ===== */
+.main{
+  flex:1;
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.header h1{
+  font-size:28px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.header p{
+  color:#9ca3af;
+  margin-top:4px;
+}
+
+.avatar-btn{
+  background:white;
+  color:black;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Warning */
+.warning{
+  margin-top:20px;
+  background:#111827;
+  border:1px solid #facc15;
+  color:#fde68a;
+  padding:14px 16px;
+  border-radius:12px;
+  font-size:14px;
+}
+
+/* Chat Area */
+.chat{
+  margin-top:20px;
+  flex:1;
+  background:linear-gradient(180deg,#0b1220,#0b0f14);
+  border:1px solid #1f2937;
+  border-radius:18px;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.message{
+  display:flex;
+  gap:12px;
+  max-width:700px;
+}
+
+.avatar{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#8b5cf6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.bubble{
+  background:#111827;
+  border:1px solid #1f2937;
+  border-radius:14px;
+  padding:14px 16px;
+  color:#e5e7eb;
+  line-height:1.5;
+}
+
+/* Input */
+.input-area{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+}
+
+.input-area input{
+  flex:1;
+  padding:16px;
+  background:#111827;
+  border:1px solid #1f2937;
+  border-radius:14px;
+  color:white;
+}
+
+.send-btn{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  border:none;
+  width:56px;
+  border-radius:14px;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="icon">🧠</div>
+      <div>
+        <h2>SOUL-NET</h2>
+        <span>Memory System</span>
+      </div>
+    </div>
+
+    <p class="welcome">Welcome back,<br><b>girish</b></p>
+
+    <nav>
+      <a>🏠 Dashboard</a>
+      <a>➕ Capture Decision</a>
+      <a>🗂 Memory Vault</a>
+      <a>🧩 Memory Graph</a>
+      <a class="active">💬 Talk to Avatar</a>
+      <a>🔮 What If...</a>
+      <a>⚙ Memory Control</a>
+      <a>🛡 Ethics & Privacy</a>
+    </nav>
+
+    <footer>
+      “Your mind is not data. It's a legacy.”
+    </footer>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="header">
+      <div>
+        <h1>💬 Talk to Your Past Self</h1>
+        <p>Your avatar only speaks from your memories</p>
+      </div>
+      <button class="avatar-btn">⚙ Avatar</button>
+    </div>
+
+    <div class="warning">
+      ⚠ This avatar can only answer using your 5 stored memories — never generic advice.
+    </div>
+
+    <div class="chat">
+      <div class="message">
+        <div class="avatar">🧠</div>
+        <div class="bubble">
+          Hi girish. Based on your 5 preserved memories, I can help you understand
+          patterns in your thinking. What's on your mind?
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input placeholder="Ask about your past decisions..." />
+      <button class="send-btn">➤</button>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+console.log("Talk to Avatar Loaded");
+</script>
+
+</body>
+</html>
