@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOUL-NET Ethics & Transparency</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background:#0b0f14;
+    color:#e5e7eb;
+}
+
+/* ===== LAYOUT ===== */
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:260px;
+    background:#0e131a;
+    padding:25px;
+    border-right:1px solid #1f2933;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.logo-icon{
+    width:40px;
+    height:40px;
+    background:#3b82f6;
+    border-radius:10px;
+}
+
+.logo h2{
+    font-size:18px;
+}
+
+.user{
+    margin-bottom:30px;
+    color:#9ca3af;
+}
+
+.menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    margin-bottom:8px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#9ca3af;
+}
+
+.menu a:hover{
+    background:#1f2933;
+}
+
+.menu a.active{
+    background:#1f2933;
+    color:white;
+}
+
+/* ===== MAIN ===== */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+.title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.title h1{
+    font-size:32px;
+}
+
+.subtitle{
+    color:#9ca3af;
+    margin-top:6px;
+}
+
+/* ===== CARDS ===== */
+.card{
+    background:#111827;
+    border-radius:18px;
+    padding:25px;
+    margin-top:30px;
+    border:1px solid #1f2933;
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+/* ===== GRID BOX ===== */
+.grid{
+    display:grid;0000000000
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:#0e131a;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #1f2933;
+}
+
+/* ===== TOGGLE ===== */
+.setting{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0e131a;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:15px;
+    border:1px solid #1f2933;
+}
+
+.setting span{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+.switch{
+    width:50px;
+    height:26px;
+    background:#374151;
+    border-radius:20px;
+    position:relative;
+    cursor:pointer;
+}
+
+.switch::before{
+    content:"";
+    position:absolute;
+    width:22px;
+    height:22px;
+    background:white;
+    border-radius:50%;
+    top:2px;
+    left:2px;
+    transition:0.3s;
+}
+
+.switch.active{
+    background:#3b82f6;
+}
+
+.switch.active::before{
+    left:26px;
+}
+
+/* ===== LEDGER ===== */
+.ledger-item{
+    background:#0e131a;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:12px;
+    border:1px solid #1f2933;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* ===== RESET ===== */
+.reset{
+    border:1px solid #7f1d1d;
+}
+
+.reset button{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    text-align:center;
+    margin-top:50px;
+    color:#6b7280;
+    font-style:italic;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+    <div class="logo">
+        <div class="logo-icon"></div>
+        <div>
+            <h2>SOUL-NET</h2>
+            <small>Memory System</small>
+        </div>
+    </div>
+
+    <div class="user">Welcome back,<br><strong>girish</strong></div>
+
+    <div class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Capture Decision</a>
+        <a href="#">Memory Vault</a>
+        <a href="#">Memory Graph</a>
+        <a href="#">Talk to Avatar</a>
+        <a href="#">What If...</a>
+        <a href="#">Memory Control</a>
+        <a class="active" href="#">Ethics & Privacy</a>
+    </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+    <div class="title">
+        <h1>Ethics & Transparency</h1>
+    </div>
+    <p class="subtitle">Your privacy is not negotiable</p>
+
+    <!-- WHAT NEVER DO -->
+    <div class="card">
+        <h2>What this system will NEVER do</h2>
+
+        <div class="grid">
+            <div class="box">No passive data capture — you control every memory</div>
+            <div class="box">No emotional manipulation — honest reflections only</div>
+            <div class="box">No profiling without consent — your patterns stay yours</div>
+            <div class="box">No decision override — suggestions, never commands</div>
+        </div>
+    </div>
+
+    <!-- CONSENT SETTINGS -->
+    <div class="card">
+        <h2>Your Consent Settings</h2>
+
+        <div class="setting">
+            <div>
+                <strong>Store decisions intentionally</strong><br>
+                <span>Your decisions are saved only when you choose</span>
+            </div>
+            <div class="switch" onclick="toggle(this)"></div>
+        </div>
+
+        <div class="setting">
+            <div>
+                <strong>Use past reasoning for suggestions</strong><br>
+                <span>Your avatar can reference your past decisions</span>
+            </div>
+            <div class="switch active" onclick="toggle(this)"></div>
+        </div>
+
+        <div class="setting">
+            <div>
+                <strong>Offline Mode</strong><br>
+                <span>All reasoning done locally using stored memory</span>
+            </div>
+            <div class="switch" onclick="toggle(this)"></div>
+        </div>
+    </div>
+
+    <!-- LEDGER -->
+    <div class="card">
+        <h2>Consent Ledger</h2>
+
+        <div class="ledger-item">
+            <div>Consent Granted<br><small>Store decisions: false, Use reasoning: true</small></div>
+            <div>Jan 30, 10:10</div>
+        </div>
+
+        <div class="ledger-item">
+            <div>Memory Added<br><small>Decision: my friend is girish</small></div>
+            <div>Jan 30, 09:25</div>
+        </div>
+
+        <div class="ledger-item">
+            <div>Memory Added<br><small>Decision: Naming my dog "Leo"</small></div>
+            <div>Jan 30, 09:20</div>
+        </div>
+    </div>
+
+    <!-- RESET -->
+    <div class="card reset">
+        <h2>Reset Identity & Erase All Memory</h2>
+        <p>Permanently delete all your stored decisions and reset your profile.</p><br>
+        <button onclick="alert('Reset Process Started')">Begin Reset Process</button>
+    </div>
+
+    <div class="footer">"Your mind is not data. It's a legacy."</div>
+
+</div>
+</div>
+
+<script>
+function toggle(el){
+    el.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
