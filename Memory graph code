@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOUL-NET – Memory Graph</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+body{
+  background:#0b0f14;
+  color:#e5e7eb;
+}
+
+.app{
+  display:flex;
+  height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:260px;
+  background:#0e131a;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+}
+
+.logo{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.logo .icon{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  padding:10px;
+  border-radius:12px;
+}
+
+.logo h2{
+  font-size:18px;
+}
+
+.logo span{
+  font-size:12px;
+  color:#9ca3af;
+}
+
+.welcome{
+  margin:24px 0;
+  color:#9ca3af;
+}
+
+nav a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  margin-bottom:6px;
+  border-radius:12px;
+  color:#cbd5f5;
+  cursor:pointer;
+}
+
+nav a.active,
+nav a:hover{
+  background:#111827;
+}
+
+.sidebar footer{
+  margin-top:auto;
+  font-size:12px;
+  color:#6b7280;
+  opacity:.8;
+}
+
+/* ===== MAIN ===== */
+.main{
+  flex:1;
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.header-left h1{
+  font-size:28px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.header-left span{
+  color:#9ca3af;
+  font-size:14px;
+}
+
+.header-actions{
+  display:flex;
+  gap:10px;
+}
+
+.header-actions button{
+  background:#111827;
+  border:1px solid #1f2937;
+  color:#9ca3af;
+  padding:10px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* ===== GRAPH AREA ===== */
+.graph-container{
+  margin-top:24px;
+  flex:1;
+  border-radius:18px;
+  border:1px solid #1f3a8a;
+  background:linear-gradient(180deg,#0b1220,#0b0f14);
+  padding:20px;
+  position:relative;
+}
+
+.graph-hint{
+  color:#9ca3af;
+  font-size:14px;
+}
+
+.graph-hint li{
+  margin-bottom:6px;
+}
+
+/* placeholder grid effect */
+.graph-container::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="icon">🧠</div>
+      <div>
+        <h2>SOUL-NET</h2>
+        <span>Memory System</span>
+      </div>
+    </div>
+
+    <p class="welcome">Welcome back,<br><b>girish</b></p>
+
+    <nav>
+      <a>🏠 Dashboard</a>
+      <a>➕ Capture Decision</a>
+      <a>🗂 Memory Vault</a>
+      <a class="active">🧩 Memory Graph</a>
+      <a>💬 Talk to Avatar</a>
+      <a>🔮 What If...</a>
+      <a>⚙ Memory Control</a>
+      <a>🛡 Ethics & Privacy</a>
+    </nav>
+
+    <footer>
+      “Your mind is not data. It's a legacy.”
+    </footer>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="header">
+      <div class="header-left">
+        <h1>🧩 Memory Graph</h1>
+        <span>Visualize connections between your decisions</span>
+      </div>
+
+      <div class="header-actions">
+        <button>🔍</button>
+        <button>➕</button>
+        <button>⤢</button>
+      </div>
+    </div>
+
+    <div class="graph-container">
+      <ul class="graph-hint">
+        <li>• Click nodes to view details</li>
+        <li>• Drag to pan · Scroll to zoom</li>
+      </ul>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+console.log("Memory Graph Loaded");
+</script>
+
+</body>
+</html>
