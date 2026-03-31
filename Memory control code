@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOUL-NET | Memory Control</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ================= COLORS ================= */
+:root {
+  --bg: #0b0f14;
+  --panel: #121821;
+  --panel-soft: #161d27;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --blue: #4f7cff;
+  --cyan: #32e0c4;
+  --radius: 14px;
+}
+
+/* ================= BODY ================= */
+body {
+  background: radial-gradient(circle at top, #101622, #070a10);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0c1118, #090d13);
+  border-right: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.brand h2 {
+  font-size: 18px;
+}
+
+.brand span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.welcome {
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav a {
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: .2s;
+}
+
+.nav a:hover {
+  background: var(--panel-soft);
+  color: var(--text);
+}
+
+.nav a.active {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+}
+
+/* ================= HEADER ================= */
+.header h1 {
+  font-size: 28px;
+}
+
+.header p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ================= SEARCH ================= */
+.search {
+  margin: 20px 0;
+}
+
+.search input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* ================= MEMORY LIST ================= */
+.memories {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.memory {
+  background: linear-gradient(180deg, #121821, #0f141c);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memory h3 {
+  font-size: 16px;
+}
+
+.memory span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #1f2937;
+  font-size: 12px;
+}
+
+/* ================= RIGHT PANEL ================= */
+.panel {
+  background: linear-gradient(180deg, #121821, #0f141c);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.panel h3 {
+  margin-bottom: 14px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #1f2937;
+  color: var(--text);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: #000;
+  font-weight: 600;
+}
+
+/* ================= STATS ================= */
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ SIDEBAR ============ -->
+<div class="sidebar">
+  <div class="brand">
+    <div class="logo">🧠</div>
+    <div>
+      <h2>SOUL-NET</h2>
+      <span>Memory System</span>
+    </div>
+  </div>
+
+  <div class="welcome">Welcome back,<br><strong>girish</strong></div>
+
+  <nav class="nav">
+    <a href="#">Dashboard</a>
+    <a href="#">Capture Decision</a>
+    <a href="#">Memory Vault</a>
+    <a href="#">Memory Graph</a>
+    <a href="#">Talk to Avatar</a>
+    <a href="#">What If…</a>
+    <a class="active" href="#">Memory Control</a>
+    <a href="#">Ethics & Privacy</a>
+  </nav>
+
+  <div class="footer">"Your mind is not data. It's a legacy."</div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<div class="main">
+
+  <!-- LEFT CONTENT -->
+  <div>
+    <div class="header">
+      <h1>Memory Control</h1>
+      <p>Manage, edit, and export your memories</p>
+    </div>
+
+    <div class="search">
+      <input placeholder="Search memories..." />
+    </div>
+
+    <div class="memories">
+      <div class="memory">
+        <div>
+          <h3>my friend is girish</h3>
+          <span>Jan 30, 2026</span>
+        </div>
+        <span class="badge">Private</span>
+      </div>
+
+      <div class="memory">
+        <div>
+          <h3>Naming my dog “Leo”</h3>
+          <span>Jan 30, 2026</span>
+        </div>
+        <span class="badge">Private</span>
+      </div>
+
+      <div class="memory">
+        <div>
+          <h3>Switching to Remote Work Full-Time</h3>
+          <span>Jan 30, 2026</span>
+        </div>
+        <span class="badge">Private</span>
+      </div>
+
+      <div class="memory">
+        <div>
+          <h3>Learning a New Programming Language</h3>
+          <span>Jan 30, 2026</span>
+        </div>
+        <span class="badge">Private</span>
+      </div>
+
+      <div class="memory">
+        <div>
+          <h3>Moving to a Smaller Apartment</h3>
+          <span>Jan 30, 2026</span>
+        </div>
+        <span class="badge">Private</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div>
+    <div class="panel">
+      <h3>Export Memories</h3>
+      <button class="btn">JSON</button>
+      <button class="btn">Timeline</button>
+      <button class="btn">Narrative</button>
+      <button class="btn primary">Export 5 Memories</button>
+    </div>
+
+    <div class="panel">
+      <h3>Memory Stats</h3>
+      <div class="stat"><span>Total memories</span><span>5</span></div>
+      <div class="stat"><span>Private</span><span>5</span></div>
+      <div class="stat"><span>Shareable</span><span>0</span></div>
+      <div class="stat"><span>Temporary</span><span>0</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>Visibility Levels</h3>
+      <div class="stat"><span>Private</span><span>Only you</span></div>
+      <div class="stat"><span>Shareable</span><span>Via link</span></div>
+      <div class="stat"><span>Temporary</span><span>30 days</span></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// JS reserved for future interactions
+console.log("SOUL-NET loaded");
+</script>
+
+</body>
+</html>
