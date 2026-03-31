@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SOUL-NET – Memory Vault</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    body {
+      background: #0b0f14;
+      color: #e5e7eb;
+    }
+
+    .app {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      width: 260px;
+      background: #0e131a;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo .icon {
+      font-size: 26px;
+    }
+
+    .logo h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo span {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .welcome {
+      margin: 20px 0 30px;
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      border-radius: 10px;
+      color: #cbd5f5;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #111827;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 12px;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    /* ===== Main ===== */
+    .main {
+      flex: 1;
+      padding: 32px;
+      overflow-y: auto;
+    }
+
+    .top {
+      margin-bottom: 20px;
+    }
+
+    .top h1 {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .top span {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    /* ===== Search ===== */
+    .search-bar {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0 30px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 14px 16px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      color: #e5e7eb;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 14px 22px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: #ffffff;
+      color: #000;
+      font-weight: 500;
+    }
+
+    /* ===== Grid ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      padding: 22px;
+      position: relative;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #334155;
+      transform: translateY(-2px);
+    }
+
+    .percent {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      color: #22d3ee;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="icon">🧠</div>
+      <div>
+        <h2>SOUL-NET</h2>
+        <span>Memory System</span>
+      </div>
+    </div>
+
+    <div class="welcome">
+      Welcome back,<br>
+      <strong>girish</strong>
+    </div>
+
+    <nav>
+      <a>Dashboard</a>
+      <a>Capture Decision</a>
+      <a class="active">Memory Vault</a>
+      <a>Memory Graph</a>
+      <a>Talk to Avatar</a>
+      <a>What If...</a>
+      <a>Memory Control</a>
+      <a>Ethics & Privacy</a>
+    </nav>
+
+    <footer>
+      "Your mind is not data. It's a legacy."
+    </footer>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="top">
+      <h1>Memory Vault</h1>
+      <span>5 memories preserved</span>
+    </div>
+
+    <div class="search-bar">
+      <input placeholder="What was I thinking when..." />
+      <button>Filters</button>
+    </div>
+
+    <section class="grid">
+
+      <div class="card">
+        <div class="percent">70%</div>
+        <h3>my friend is girish</h3>
+        <p>..</p>
+        <div class="meta">Jan 30, 2026 · Other</div>
+      </div>
+
+      <div class="card">
+        <div class="percent">75%</div>
+        <h3>Naming my dog “Leo”</h3>
+        <p>Leo</p>
+        <div class="meta">Jan 30, 2026 · Personal</div>
+      </div>
+
+      <div class="card">
+        <div class="percent">85%</div>
+        <h3>Switching to Remote Work Full-Time</h3>
+        <p>Negotiate full remote position, regular check-ins</p>
+        <div class="meta">Jan 30, 2026 · Career</div>
+      </div>
+
+      <div class="card">
+        <div class="percent">90%</div>
+        <h3>Learning a New Programming Language</h3>
+        <p>Focus on TypeScript & side projects</p>
+        <div class="meta">Jan 30, 2026 · Learning</div>
+      </div>
+
+      <div class="card">
+        <div class="percent">75%</div>
+        <h3>Moving to a Smaller Apartment</h3>
+        <p>Downsize to 1BR with office nook</p>
+        <div class="meta">Jan 30, 2026 · Financial</div>
+      </div>
+
+    </section>
+  </main>
+
+</div>
+
+<script>
+  console.log("SOUL-NET Memory Vault Loaded");
+</script>
+
+</body>
+</html>
